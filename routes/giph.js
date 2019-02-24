@@ -71,7 +71,6 @@ router.get('/stickers', function (req, res) {
         response.on('end', function() {
             // retrieves finished data and parses it (JSON)
             var parsed = JSON.parse(body);
-            // THIS LINE IS IMPORTANT
             console.log(parsed.data[0].url)
             // renders the home template and pass gif data to template
             res.render('gif-sticker', {gifs: parsed.data})
