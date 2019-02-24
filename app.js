@@ -10,11 +10,11 @@ const exphbs       = require('express-handlebars');
 
 // sessions
 const cookieParser = require('cookie-parser');
-const session      = require('express-session')
+// const session      = require('express-session')
 
 // apis
 const dotenv       = require('dotenv').config();
-const passport     = require('./config/passport');
+// const passport     = require('./config/passport');
 
 // routes
 const indexRouter  = require('./routes/index');
@@ -26,7 +26,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 // configure sessions
 const session = require('express-session');
-app.use(session({ secret: 'secret-unique-code', cookie: { maxAge: 3600000 }, resave: true, saveUninitialized: true }));
+// app.use(session({ secret: 'secret-unique-code', cookie: { maxAge: 3600000 }, resave: true, saveUninitialized: true }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
